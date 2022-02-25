@@ -14,6 +14,7 @@ class Test01Android:
     def setup_method(self):
         log.info("This is the function level setup")
 
+    @pytest.mark.parametrize('os', 'android')
     def test_01(self):
         log.info("This is test_01 method")
 
