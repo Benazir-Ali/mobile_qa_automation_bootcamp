@@ -1,7 +1,7 @@
 import pytest
 import logging
 
-logging.basicConfig(filename="test_03.log", level=logging.DEBUG)
+logging.basicConfig(filename="test_03.log")
 log = logging.getLogger()
 
 
