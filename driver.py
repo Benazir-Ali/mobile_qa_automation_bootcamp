@@ -7,22 +7,19 @@ class WebCommon:
         self.driver = None
 
     def init_driver(self):
-        self.driver = self.get_driver()
-
-    def get_driver(self):
         desired_caps = {}
         desired_caps['platformName'] = 'Android'
-        desired_caps['platforVersion'] = '10.0'
-        desired_caps['deviceName'] = 'Galaxy API 29'
-        desired_caps['app'] = 'apk_name'
-        desired_caps['appActivity'] = '.Settings'
-        desired_caps['appPackage'] = 'com.android.settings'
-        desired_caps['noReset'] = 'true'
-        desired_caps['forceMjsonwp'] = 'true'
+        desired_caps['deviceName'] = 'Tester'
+        desired_caps['app'] = self.apk_name
+        desired_caps["appPackage"] = "io.cloudgrey.the_app"
+        desired_caps["appActivity"] = "io.cloudgrey.the_app.MainActivity"
 
         self.driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
 
         return self.driver
+
+    def get_driver(self):
+        self.driver = self.init_driver()
 
     def close_driver(self):
         self.driver.quit()
