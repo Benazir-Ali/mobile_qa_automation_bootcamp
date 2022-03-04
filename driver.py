@@ -10,10 +10,8 @@ class WebCommon:
         desired_caps = {}
         desired_caps['platformName'] = 'Android'
         desired_caps['platformVersion'] = '10.0'
-        desired_caps['deviceName'] = 'Galaxy API 29'
-        desired_caps['app'] = 'apk_name'
-        desired_caps['appActivity'] = '.Settings'
-        desired_caps['appPackage'] = 'com.android.settings'
+        desired_caps['deviceName'] = 'Tester'
+        desired_caps['app'] = self.apk_name
 
         self.driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
 
