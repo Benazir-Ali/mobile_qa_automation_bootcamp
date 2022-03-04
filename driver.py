@@ -14,6 +14,7 @@ class WebCommon:
         desired_caps["appPackage"] = "io.cloudgrey.the_app"
         desired_caps["appActivity"] = "io.cloudgrey.the_app.MainActivity"
 
+
         self.driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
 
         return self.driver
