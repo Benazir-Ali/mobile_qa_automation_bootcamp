@@ -9,7 +9,6 @@ class WebCommon:
     def init_driver(self):
         desired_caps = {}
         desired_caps['platformName'] = 'Android'
-        desired_caps['platformVersion'] = '10.0'
         desired_caps['deviceName'] = 'Tester'
         desired_caps['app'] = self.apk_name
 
